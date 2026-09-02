@@ -1,0 +1,106 @@
+# ============================================================
+#  Stock Ledger — repository ignore rules
+#  Anything that is generated, installed, local, or secret.
+# ============================================================
+
+# ---------- secrets: never commit a real .env ----------
+# .env.example IS committed — it documents the variables with no values.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# ---------- Python virtual environments ----------
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ---------- Python build artefacts ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+develop-eggs/
+downloads/
+eggs/
+lib60/
+parts/
+sdist/
+wheels/
+share/python-wheels/
+MANIFEST
+
+# ---------- Django ----------
+db.sqlite3
+db.sqlite3-journal
+*.sqlite3
+/staticfiles/
+/mediafiles/
+/media/
+local_settings.py
+
+# ---------- test & coverage ----------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ---------- Node / frontend ----------
+node_modules/
+dist/
+dist-ssr/
+build/
+.vite/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.eslintcache
+
+# ---------- editors & IDEs ----------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# ---------- operating system ----------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ---------- logs & scratch ----------
+*.log
+logs/
+tmp/
+temp/
+
+# ---------- superseded / transfer leftovers ----------
+# The standalone engine now lives at backend/calculations/
+pnl_engine/
+_to_delete/
+*.tar.gz
+*.zip

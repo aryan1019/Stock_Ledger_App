@@ -1,0 +1,6 @@
+# Backend-specific. The root .gitignore covers the rest.
+db.sqlite3
+staticfiles/
+media/
+.env
+!.env.example

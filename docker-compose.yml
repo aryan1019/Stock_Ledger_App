@@ -1,0 +1,15 @@
+# Postgres for local development. The backend falls back to SQLite when
+# DATABASE_URL is unset, so this is optional until you want the real thing.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ledger
+      POSTGRES_USER: ledger
+      POSTGRES_PASSWORD: ledger
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
